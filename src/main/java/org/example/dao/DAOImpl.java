@@ -5,9 +5,10 @@ import org.example.entity.Department;
 import org.example.entity.Employee;
 
 import java.util.HashMap;
-
+@RequiredArgsConstructor
+@Repository
 public class DAOImpl implements DAO {
-    private final DBConfig dbConfig = new DBConfig();
+    private final DBConfig dbConfig;
     @Override
     public void addEmployee(Employee employee) {
     dbConfig.getEmployeeList().put(employee.getId(), employee);
