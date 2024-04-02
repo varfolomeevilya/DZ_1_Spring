@@ -8,7 +8,7 @@ import org.example.entity.Employee;
 import java.util.HashMap;
 
 public class Service implements ServiceImpl {
-    private final DAO dao = new DAOImpl();
+    private final DAO dao;
     @Override
     public void addEmployee(Employee employee){
         dao.addEmployee(employee);
