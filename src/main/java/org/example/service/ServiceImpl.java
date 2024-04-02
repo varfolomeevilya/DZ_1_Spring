@@ -3,9 +3,10 @@ package org.example.service;
 import org.example.entity.Department;
 import org.example.entity.Employee;
 
-import java.util.TreeMap;
+import java.util.HashMap;
 
-public interface ServiceAll {
+
+public interface ServiceImpl {
     void addEmployee(Employee employee);
 
     void updateEmployeeName(Employee employee, String name);
@@ -22,7 +23,7 @@ public interface ServiceAll {
 
     void deleteDepartmentById(Long id);
 
-    TreeMap<Long, Employee> getAllEmployee();
+    HashMap<Long, Employee> getAllEmployee();
 
-    TreeMap<Long, Department> getAllDepartment();
+    HashMap<Long, Department> getAllDepartment();
 }

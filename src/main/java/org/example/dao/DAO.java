@@ -3,6 +3,7 @@ package org.example.dao;
 import org.example.entity.Department;
 import org.example.entity.Employee;
 
+import java.util.HashMap;
 import java.util.TreeMap;
 
 public interface DAO {
@@ -18,6 +19,6 @@ public interface DAO {
     void addDepartment(Department department);
     void updateDepartmentName(Department department, String departmentName);
     void deleteByDepartmentId(long id);
-    TreeMap<Long, Employee>getAllEmployee();
-    TreeMap<Long, Department>getAllDepartment();
+    HashMap<Long, Employee>getAllEmployee();
+   HashMap<Long, Department> getAllDepartment();
 }

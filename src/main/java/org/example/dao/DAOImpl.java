@@ -4,9 +4,9 @@ import org.example.dbconfig.DBConfig;
 import org.example.entity.Department;
 import org.example.entity.Employee;
 
-import java.util.TreeMap;
+import java.util.HashMap;
 
-public class AppDao implements DAO {
+public class DAOImpl implements DAO {
     private final DBConfig dbConfig = new DBConfig();
     @Override
     public void addEmployee(Employee employee) {
@@ -49,12 +49,12 @@ public class AppDao implements DAO {
     }
 
     @Override
-    public TreeMap<Long, Employee> getAllEmployee() {
+    public HashMap<Long, Employee> getAllEmployee() {
         return dbConfig.getEmployeeList();
     }
 
     @Override
-    public TreeMap<Long, Department> getAllDepartment() {
+    public HashMap<Long, Department> getAllDepartment() {
         return dbConfig.getDepartmentList();
     }
 }

@@ -1,14 +1,14 @@
 package org.example.service;
 
-import org.example.dao.AppDao;
+import org.example.dao.DAOImpl;
 import org.example.dao.DAO;
 import org.example.entity.Department;
 import org.example.entity.Employee;
 
-import java.util.TreeMap;
+import java.util.HashMap;
 
-public class Service implements ServiceAll{
-    private final DAO dao = new AppDao();
+public class Service implements ServiceImpl {
+    private final DAO dao = new DAOImpl();
     @Override
     public void addEmployee(Employee employee){
         dao.addEmployee(employee);
@@ -47,12 +47,12 @@ public class Service implements ServiceAll{
     }
 
     @Override
-    public TreeMap<Long, Employee> getAllEmployee() {
+    public HashMap<Long, Employee> getAllEmployee() {
         return dao.getAllEmployee();
     }
 
     @Override
-    public TreeMap<Long, Department> getAllDepartment() {
+    public HashMap<Long, Department> getAllDepartment() {
         return dao.getAllDepartment();
     }
 }
