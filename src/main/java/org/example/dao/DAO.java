@@ -4,7 +4,7 @@ import org.example.entity.Department;
 import org.example.entity.Employee;
 
 import java.util.HashMap;
-import java.util.TreeMap;
+
 
 public interface DAO {
     void addEmployee(Employee employee);
